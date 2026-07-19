@@ -8,6 +8,7 @@ function AllCustomers({ customers, services }) {
   return (
     <section className="content-section">
       <h2>All Customers</h2>
+      <div className="table-wrap">
       <table>
         <thead>
           <tr>
@@ -40,6 +41,7 @@ function AllCustomers({ customers, services }) {
           )}
         </tbody>
       </table>
+      </div>
 
       {selectedCustomer && (
         <CustomerModal

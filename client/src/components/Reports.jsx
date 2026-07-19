@@ -70,6 +70,7 @@ function Reports({ services }) {
       {report && (
         <div style={{ marginTop: '20px' }}>
           <h3>{report.title}</h3>
+          <div className="table-wrap">
           <table>
             <thead>
               <tr>
@@ -87,6 +88,7 @@ function Reports({ services }) {
               )}
             </tbody>
           </table>
+          </div>
         </div>
       )}
     </section>

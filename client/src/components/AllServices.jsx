@@ -30,6 +30,7 @@ function AllServices({ services, statusFilter, onDataChange, showMessage }) {
   return (
     <section className="content-section">
       <h2>All Service Requests{statusFilter !== 'all' ? ` — ${formatStatus(statusFilter)}` : ''}</h2>
+      <div className="table-wrap">
       <table>
         <thead>
           <tr>
@@ -52,9 +53,11 @@ function AllServices({ services, statusFilter, onDataChange, showMessage }) {
               <td>{formatPriority(service.priority)}</td>
               <td><span className={`status-${service.status}`}>{formatStatus(service.status)}</span></td>
               <td>
-                <button className="btn btn-success" onClick={() => handleStatusChange(service._id, 'in-progress')}>Start</button>{' '}
-                <button className="btn" onClick={() => handleStatusChange(service._id, 'completed')}>Complete</button>{' '}
-                <button className="btn btn-danger" onClick={() => handleDelete(service._id)}>Delete</button>
+                <div className="action-buttons">
+                  <button className="btn btn-success" onClick={() => handleStatusChange(service._id, 'in-progress')}>Start</button>
+                  <button className="btn" onClick={() => handleStatusChange(service._id, 'completed')}>Complete</button>
+                  <button className="btn btn-danger" onClick={() => handleDelete(service._id)}>Delete</button>
+                </div>
               </td>
             </tr>
           ))}
@@ -63,6 +66,7 @@ function AllServices({ services, statusFilter, onDataChange, showMessage }) {
           )}
         </tbody>
       </table>
+      </div>
     </section>
   );
 }

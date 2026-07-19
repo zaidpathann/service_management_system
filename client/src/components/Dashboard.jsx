@@ -31,6 +31,7 @@ function Dashboard({ services, customers }) {
       </div>
 
       <h3>Recent Service Requests</h3>
+      <div className="table-wrap">
       <table>
         <thead>
           <tr>
@@ -56,6 +57,7 @@ function Dashboard({ services, customers }) {
           )}
         </tbody>
       </table>
+      </div>
     </section>
   );
 }
