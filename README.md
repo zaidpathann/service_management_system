@@ -21,6 +21,20 @@ Manage customers, create and track service requests, and generate reports — al
 | Backend | Node.js + Express 4 |
 | Database | MongoDB Atlas (cloud) with Mongoose 8 |
 
+## Deployment
+
+| Service | Platform | Status |
+|---------|----------|--------|
+| Frontend | React + Vite | ⏳ Deployment Pending |
+| Backend API | Render | ✅ Live |
+| Database | MongoDB Atlas | ✅ Connected |
+
+### Live Backend
+
+**Base URL:** https://service-management-system-a4zk.onrender.com
+
+> The backend API is successfully deployed on Render and connected to MongoDB Atlas.
+
 ## Project Structure
 
 ```
