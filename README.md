@@ -1,4 +1,14 @@
 # Service Management System (MERN Stack)
+[![Frontend](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)](https://service-management-system-bice.vercel.app/)
+[![Backend](https://img.shields.io/badge/Backend-Render-46E3B7?logo=render)](https://service-management-system-a4zk.onrender.com)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?logo=mongodb)](https://www.mongodb.com/atlas)
+
+## 🌐 Live Demo
+
+- **Frontend:** https://service-management-system-bice.vercel.app/
+- **Backend API:** https://service-management-system-a4zk.onrender.com
 
 A service management system built with **MongoDB, Express, React, and Node.js** (MERN).
 Manage customers, create and track service requests, and generate reports — all from a clean dashboard.
@@ -25,15 +35,16 @@ Manage customers, create and track service requests, and generate reports — al
 
 | Service | Platform | Status |
 |---------|----------|--------|
-| Frontend | React + Vite | ⏳ Deployment Pending |
+| Frontend | Vercel | ✅ Live |
 | Backend API | Render | ✅ Live |
 | Database | MongoDB Atlas | ✅ Connected |
 
-### Live Backend
+### Live Application
 
-**Base URL:** https://service-management-system-a4zk.onrender.com
+- **Frontend:** https://service-management-system-bice.vercel.app/
+- **Backend API:** https://service-management-system-a4zk.onrender.com
 
-> The backend API is successfully deployed on Render and connected to MongoDB Atlas.
+> The application is fully deployed with the frontend hosted on Vercel, the backend hosted on Render, and the database hosted on MongoDB Atlas.
 
 ## Project Structure
 
@@ -148,6 +159,17 @@ This starts **both** apps together:
 You should see `MongoDB connected` and `Server running on http://localhost:5000` in the terminal.
 Press **Ctrl+C** in the terminal to stop both apps.
 
+### Live Deployment
+
+The application is also available online without running it locally.
+
+| Service | URL |
+|---------|-----|
+| Frontend | https://service-management-system-bice.vercel.app/ |
+| Backend API | https://service-management-system-a4zk.onrender.com |
+
+The frontend communicates with the backend deployed on Render, which is connected to MongoDB Atlas.
+
 <details>
 <summary>Run the apps separately (optional)</summary>
 
@@ -175,6 +197,8 @@ npm run dev
 
 ## API Endpoints
 
+**Production Base URL:** `https://service-management-system-a4zk.onrender.com`
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/api/customers` | List all customers (newest first) |
@@ -197,3 +221,28 @@ npm run dev
 | Browser shows "Error loading data" | The backend isn't running or crashed — check the terminal for errors; the frontend proxies `/api` calls to port 5000. |
 | Port 5000 or 5173 already in use | Stop the other program using it, or change `PORT` in `server/.env` (also update the proxy target in `client/vite.config.js` to match). |
 | `node --watch` not recognized | Your Node.js is older than 18.11 — update Node.js (Step 1). |
+
+---
+
+## Deployment Architecture
+
+```text
+                User
+                  │
+                  ▼
+      Frontend (Vercel)
+                  │
+                  ▼
+      Backend API (Render)
+                  │
+                  ▼
+        MongoDB Atlas
+```
+
+### Deployment Platforms
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+
+The frontend sends API requests to the backend hosted on Render, and the backend securely stores and retrieves data from MongoDB Atlas.
