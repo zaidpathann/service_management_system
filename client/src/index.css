@@ -53,6 +53,7 @@ nav ul li a {
     padding: 5px 10px;
     border-radius: 4px;
     transition: background 0.3s;
+    cursor: pointer;
 }
 
 nav ul li a:hover {
@@ -96,6 +97,7 @@ nav ul li a:hover {
     padding: 8px 10px;
     border-radius: 4px;
     transition: background 0.3s;
+    cursor: pointer;
 }
 
 .sidebar ul li a:hover {
@@ -244,6 +246,63 @@ table tr:hover {
     border-top: 4px solid #27ae60;
 }
 
+/* Message Banner */
+.message-banner {
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.message-banner.success {
+    background: #eafaf1;
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+
+.message-banner.error {
+    background: #fdedec;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+/* Customer Details Modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    width: 90%;
+    max-width: 550px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal p {
+    margin-bottom: 8px;
+}
+
+.modal .modal-close {
+    margin-top: 15px;
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
@@ -258,21 +317,21 @@ footer {
     .main-content {
         grid-template-columns: 1fr;
     }
-    
+
     .header-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     nav ul {
         margin-top: 15px;
         justify-content: center;
     }
-    
+
     nav ul li {
         margin: 0 10px;
     }
-    
+
     .dashboard-cards {
         grid-template-columns: 1fr;
     }

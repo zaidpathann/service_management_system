@@ -1,0 +1,17 @@
+{
+  "name": "service-management-server",
+  "version": "1.0.0",
+  "description": "Express + MongoDB API for the Service Management System",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.0"
+  }
+}

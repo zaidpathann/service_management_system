@@ -1,0 +1,13 @@
+{
+  "name": "service-management-system",
+  "version": "1.0.0",
+  "description": "Service Management System — MERN stack (MongoDB, Express, React, Node)",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
